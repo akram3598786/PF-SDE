@@ -2,7 +2,7 @@ const fs = require('fs');
 
 // Reading the JSON File
 let jsonInput;
-fs.readFile("./sample.json", (err, data) => {
+fs.readFile("./1-input.json", (err, data) => {
   if (err) {
     console.log(err);
   } else {
@@ -19,8 +19,9 @@ function Solution(data){
   let Sumup_expenseData = Sum_up(expenseData);
   let Sumup_revenueData = Sum_up(revenueData);
 
-  console.log(Sumup_expenseData);
-  console.log(Sumup_revenueData);
+  getBalaceData(Sumup_expenseData,Sumup_revenueData)
+  //  console.log(Sumup_expenseData);
+  //  console.log(Sumup_revenueData);
 
 }
 
@@ -41,3 +42,35 @@ function Sum_up(typeofData) {
   return taken_dates;
 }
 
+function getBalaceData(expenseData,revenueData){
+   let outData = [];
+
+   for(let date in revenueData){
+    let rowdata ={
+      amount: 0,
+      startDate: date
+    }
+       if(expenseData[date]){
+        rowdata.amount = revenueData[date] - expenseData[date];
+       } 
+       else {
+        // console.log("revn", date);
+        rowdata.amount = revenueData[date];
+       }
+       outData.push(rowdata);
+   }
+
+   for(let date in expenseData){
+    let rowdata ={
+      amount: 0,
+      startDate: date
+    }
+      if(!revenueData[date]){
+        rowdata.amount = -expenseData[date]; 
+        outData.push(rowdata);
+      }
+     
+   }
+
+   console.log(outData);
+}
