@@ -1,0 +1,23 @@
+{
+  "name": "pf-sde",
+  "version": "1.0.0",
+  "description": "Assignment to test fundamental knowledge for Prism Force. This can be written in any language or framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akram3598786/PF-SDE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akram3598786/PF-SDE/issues"
+  },
+  "homepage": "https://github.com/akram3598786/PF-SDE#readme",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
