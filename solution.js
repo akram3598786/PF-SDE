@@ -3,13 +3,13 @@ import sortMonthsData from './Utilities/SortMonths.js';
 import Sum_up from './Utilities/SumupData.js';
 import getBalaceData from './Utilities/GetbalancedData.js';
 import checkForMissedMonths from './Utilities/GetMissedMonths.js';
-import computFinalData from './Utilities/ComputeFinalData.js'
+import computFinalData from './Utilities/ComputeFinalData.js';
 
 // Reading the JSON File
 let jsonInput;
 fs.readFile("./1-input.json", (err, data) => {
   if (err) {
-    console.log(err);
+    console.log(err); 
   } else {
     jsonInput = JSON.parse(data);
     Solution(jsonInput);
