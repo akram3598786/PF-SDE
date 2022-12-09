@@ -11,6 +11,7 @@
     "url": "git+https://github.com/akram3598786/PF-SDE.git"
   },
   "keywords": [],
+  "type": "module",
   "author": "",
   "license": "ISC",
   "bugs": {
