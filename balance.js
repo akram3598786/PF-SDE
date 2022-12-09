@@ -1,13 +1,13 @@
 const fs = require('fs');
 
-// Reading the iSON File
+// Reading the JSON File
 let jsonInput;
 fs.readFile("./sample.json", (err, data) => {
   if (err) {
     console.log(err);
   } else {
     jsonInput = JSON.parse(data);
-    // console.log(isonInput);
+    // console.log(jsonInput);
     Solution(jsonInput);
   }
 })
@@ -24,7 +24,7 @@ function Solution(data){
 
 }
 
-// T0 return sumup of data (Sum of duplicates data amounts)
+// To return sumup of data (Sum of duplicates data amounts)
 function Sum_up(typeofData) {
   let taken_dates = {};
   for (let i = 0; i < typeofData.length; i++) {
